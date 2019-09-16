@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<section id="headlines" style="margin-top:120px;">
+    <div class="container" >
+        <div class="row">
+            <h1 class="text-center" style="font-family: 'Crimson Text', serif;">Top Headlines Around The World</h1>
+            <hr>
+            {% for article in headlines %}
+    
+    
+    
+    <div class="col-md-4" style="font-family: 'Crimson Text', serif;font-size:20px">
+            <div class="card" style="height:200px;">
+                <div class="card-header">
+                        <h3 class="list-group-item" style="font-weight:600;"><em>{{article.title | truncate(80)}}</em></h3>
+                </div>
+                <a href="{{article.url}}" target="_blank">
+                    <img class="card-img-top m-b-4" id="article-img" src="{{article.image}}" alt="Image of {{article.title}}" style="height:260px;width:100%;">
+            
+                </a>
+                <div class="card-body">
+                    <div class="card-text">
+                            <ul class="list-group list-group-flush">
+                                    <!-- <p class="list-group-item"><h3><em>{{article.title}}</em></h3></p> -->
+                                    <p>By: {{article.author}}</p>
+                                    <p class="list-group-item">Posted on {{article.date}}</p>
+                                    <p class="card-link">
+                                            {{article.description|truncate(120)}}...
+                                                <span><a  href="{{article.url}}" target="_blank">Read More</a></span>
+                                
+                                    </p>
+                                    
+    
+                            </ul>
+    
+                    </div>
+    
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+    </div>
+    
+    {% endfor %}
+    <hr>
+        </div>
+    </div>
+    {% endblock%}
+</section>
