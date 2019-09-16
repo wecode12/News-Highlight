@@ -10,7 +10,7 @@ See all the news articles from that particular news source
 See the image description and time the news article was posted.
 Click on an article and read it directly from the news source.
 Setup/Installation Requirements.
-Git clone https://github.com/TonyKioko/NewsHighlight or download and unzip the repository from github.
+
 Have python3.6 installed in your machine
 Navigate into cloned file using the termianl.
 Run python3.6 -m venv --without-pip virtual to create a virtual environment.
